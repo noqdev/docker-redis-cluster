@@ -1,7 +1,7 @@
 # Build based on redis:6.2.7
 FROM redis:6.2.7
 
-LABEL maintainer="Steven Moy <docker@stevenmoy.com>"
+LABEL maintainer="Steven Moy <steven@noq.dev>"
 
 # Some Environment Variables
 ENV HOME /root

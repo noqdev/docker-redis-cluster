@@ -149,7 +149,7 @@ Or the built redis-cli tool inside the container that will connect to the cluste
 
 To start with TLS
 
-    docker run -e DEFAULT_PASSWORD=whoami -e REDIS_TLS_CERT_FILE=/etc/redis/tls/redis.crt -e REDIS_TLS_KEY_FILE=/etc/redis/tls/redis.key -e REDIS_TLS_CA_FILE=/etc/redis/tls/ca.crt -v /home/smoy/redis-cluster-testing/tests/tls:/etc/redis/tls -it stevenmoy/redis-cluster:latest
+    docker run -e DEFAULT_PASSWORD=whoami -e REDIS_TLS_CERT_FILE=/etc/redis/tls/redis.crt -e REDIS_TLS_KEY_FILE=/etc/redis/tls/redis.key -e REDIS_TLS_CA_FILE=/etc/redis/tls/ca.crt -v /home/smoy/redis-cluster-testing/tests/tls:/etc/redis/tls -it noqdev/redis-cluster:latest
 
 ## Include sentinel instances
 
