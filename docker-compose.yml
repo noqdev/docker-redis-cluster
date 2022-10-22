@@ -5,6 +5,13 @@ services:
      IP: ${REDIS_CLUSTER_IP}
      SENTINEL: ${REDIS_USE_SENTINEL}
      STANDALONE: ${REDIS_USE_STANDALONE}
+     DEFAULT_PASSWORD: whoami
+     USER_NAME: ${REDIS_USER_NAME}
+     USER_PASWWORD: ${REDIS_USER_PASSWORD}
+     REDIS_TLS_CERT_FILE: /etc/redis/tls/redis.crt
+     REDIS_TLS_KEY_FILE: /etc/redis/tls/redis.key
+     REDIS_TLS_CA_FILE: /etc/redis/tls/ca.crt
+     INITIAL_PORT: ${INITIAL_PORT}
     build:
       context: .
       args:
@@ -13,3 +20,5 @@ services:
     ports:
       - '7000-7050:7000-7050'
       - '5000-5010:5000-5010'
+    volumes:
+      - ./tests/tls/:/etc/redis/tls

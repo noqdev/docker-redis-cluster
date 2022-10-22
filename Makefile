@@ -24,3 +24,7 @@ bash:
 
 cli:
 	docker-compose exec redis-cluster /redis/src/redis-cli -p 7000
+
+hub-build:
+	docker buildx create --use
+	docker buildx build --platform=linux/amd64,linux/arm64 -t noqdev/redis-cluster:latest --push .
